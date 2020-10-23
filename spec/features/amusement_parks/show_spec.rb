@@ -17,7 +17,6 @@ RSpec.describe "When I visit the amusement parks show page" do
     expect(page).to have_content(@ride1.name)
     expect(page).to have_content(@ride2.name)
     expect(page).to have_content(@ride3.name)
-    save_and_open_page
     expect(page).to have_content("Average Thrill Rating of Rides: #{@ap1.average_ride_thrill}/10")
   end
 end
