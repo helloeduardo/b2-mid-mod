@@ -1,0 +1,12 @@
+<h1><%= @ap.name %></h1>
+
+<p>Admissions: <%= @ap.price %></p>
+
+<p>Rides</p>
+<ol>
+  <% @ap.rides.each do |ride| %>
+    <li>
+      <%= ride.name %>
+    </li>
+  <% end %>
+</ol>
