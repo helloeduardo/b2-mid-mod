@@ -36,4 +36,14 @@ RSpec.describe "When I visit the mechanics show page" do
     expect(page).to have_content(@ride2.name)
     expect(page).to have_content(@ride3.name)
   end
+
+  it "I see that mechanic's rides in alphabetical order" do
+    @mech.rides << @ride3
+
+    visit "/mechanics/#{@mech.id}"
+
+    expect(page.all('.ride')[0]).to have_content(@ride2.name)
+    expect(page.all('.ride')[1]).to have_content(@ride1.name)
+    expect(page.all('.ride')[2]).to have_content(@ride3.name)
+  end
 end

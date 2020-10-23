@@ -3,8 +3,8 @@
 
 <p>Current rides they're working on:</p>
 
-<% @mechanic.rides.each do |ride| %>
-  <p>
+<% @mechanic.alphabetical_rides.each do |ride| %>
+  <p class="ride">
     <%= ride.name %>
   </p>
 <% end %>
